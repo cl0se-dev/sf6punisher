@@ -21,5 +21,5 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
   }
 }
 
-getCSV(); //最初に実行される
-console.log(convertCSVtoArray())
+
+console.log(convertCSVtoArray(getCSV();))
