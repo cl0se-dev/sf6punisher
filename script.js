@@ -19,8 +19,7 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
   for(var i=0;i<tmp.length;++i){
       result[i] = tmp[i].split(',');
   }
-
-  alert(result[1][2]); // 300yen
 }
 
 getCSV(); //最初に実行される
+console.log(convertCSVtoArray())
