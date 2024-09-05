@@ -22,4 +22,4 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
 }
 
 
-console.log(convertCSVtoArray(getCSV()));
+console.log(convertCSVtoArray(getCSV();));
