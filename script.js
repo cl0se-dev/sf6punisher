@@ -27602,7 +27602,7 @@ const arts = [
   {
     Id: "3251",
     CharId: "20",
-    Name: "?吻",
+    Name: "螭吻",
     CmdM: "",
     CmdC: "6HP",
     Move: "un",
