@@ -1,12 +1,12 @@
-//CSVファイルを読み込む関数getCSV()の定義
-function getCSV(){
+// CSVファイルを読み込む関数getCSV()の定義
+function getCSV(callback){
   var req = new XMLHttpRequest(); // HTTPでファイルを読み込むためのXMLHttpRrequestオブジェクトを生成
   req.open("get", "frames.csv", true); // アクセスするファイルを指定
   req.send(null); // HTTPリクエストの発行
 
   // レスポンスが返ってきたらconvertCSVtoArray()を呼ぶ	
   req.onload = function(){
-convertCSVtoArray(req.responseText); // 渡されるのは読み込んだCSVデータ
+    callback(req.responseText); // 渡されるのは読み込んだCSVデータ
   }
 }
 
@@ -19,7 +19,10 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
   for(var i=0;i<tmp.length;++i){
       result[i] = tmp[i].split(',');
   }
+  return result;
 }
 
-
-console.log(convertCSVtoArray(getCSV();));
+// getCSVで読み込んだデータをconvertCSVtoArrayに渡して出力
+getCSV(function(csvData) {
+  console.log(convertCSVtoArray(csvData));
+});
